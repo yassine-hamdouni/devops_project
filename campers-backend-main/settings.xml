@@ -7,12 +7,12 @@
         <server>
             <id>snapshots</id>
             <username>admin</username>
-            <password>admin</password>
+            <password>yassine2001</password>
         </server>
         <server>
             <id>releases</id>
             <username>admin</username>
-            <password>admin</password>
+            <password>yassine2001</password>
         </server>
     </servers>
 
