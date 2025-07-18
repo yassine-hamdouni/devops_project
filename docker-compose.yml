@@ -28,6 +28,7 @@ networks:
     external: true
 
 volumes:
+
   jenkins_home:
   nexus_data:
   mysql_data:
