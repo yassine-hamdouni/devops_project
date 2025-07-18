@@ -7,7 +7,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'yassine222/devops_project'
         DOCKER_HUB_USERNAME = 'yassine222'
-        DOCKER_HUB_PASSWORD = ''
+        DOCKER_HUB_PASSWORD = 'dckr_pat_dqWzF3GbS6P8dXHcdr7Tt9NE4ho'
         NEXUS_SNAPSHOT_URL = 'http://localhost:8081/repository/maven-snapshots/'
         NEXUS_RELEASE_URL = 'http://localhost:8081/repository/maven-releases/'
         GROUP_ID = 'tn.esprit'
@@ -81,6 +81,19 @@ pipeline {
                 }
             }
         }
-        
+
+        stage('Performance Test with K6') {
+    steps {
+        dir('campers-backend-main') {
+            sh '''
+                echo "Running K6 performance test..."
+                docker run --rm -i \
+                    -v $(pwd)/k6:/k6 \
+                    grafana/k6 run /k6/test-k6.js
+            '''
+        }
+    }
+}
+
     }
 }
