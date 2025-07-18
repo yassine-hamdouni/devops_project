@@ -7,7 +7,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'yassine222/devops_project'
         DOCKER_HUB_USERNAME = 'yassine222'
-        DOCKER_HUB_PASSWORD = 'dckr_pat_dqWzF3GbS6P8dXHcdr7Tt9NE4ho'
+        DOCKER_HUB_PASSWORD = ''
         NEXUS_SNAPSHOT_URL = 'http://localhost:8081/repository/maven-snapshots/'
         NEXUS_RELEASE_URL = 'http://localhost:8081/repository/maven-releases/'
         GROUP_ID = 'tn.esprit'
